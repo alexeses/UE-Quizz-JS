@@ -15,7 +15,7 @@ body {
     background-color: #f1f1f14c;
 }
 
-.container {
+.container, .user {
     background-color: #f1f1f1cd;
     padding: 20px;
     margin: auto;
@@ -71,4 +71,14 @@ h2 {
 #resultado {
     text-align: center;
     margin: 20px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

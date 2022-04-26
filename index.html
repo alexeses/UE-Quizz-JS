@@ -12,6 +12,13 @@
             <p>Juego de capitales</p>
         </header>
 
+        <!-- Introduce tu nombre -->
+        <div class="user">
+            <label class="input">
+                <input type="text" id="user" placeholder="Introduce tu nombre" onkeyup="user(this)"/>
+            </label>
+        </div>
+
         <div class="container">
             <section id="p0">
                 <h3>¿Cuál es la capital de España?</h3>
@@ -29,13 +36,13 @@
             <section id="p1">
                 <h3>¿Cuál es la capital de Portugal?</h3>
                 <label>
-                    <input type="radio" name="p1" value="1" onclick="respuesta(1, this)"/> Lisboa
+                    <input type="radio" name="p1" value="1" onclick="respuesta(1, this)"/> Paris
                 </label>
                 <label>
                     <input type="radio" name="p1" value="2" onclick="respuesta(1, this)"/> Porto
                 </label>
                 <label>
-                    <input type="radio" name="p1" value="3" onclick="respuesta(1, this)"/> Paris
+                    <input type="radio" name="p1" value="3" onclick="respuesta(1, this)"/> Lisboa
                 </label>
             </section>
             <!-- -->
@@ -68,7 +75,7 @@
             <section id="p4">
                 <h3>¿Cuál es la capital de Alemania?</h3>
                 <label>
-                    <input type="radio" name="p4" value="1" onclick="respuesta(4, this)"/>  Berlin
+                    <input type="radio" name="p4" value="1" onclick="respuesta(4, this)"/> Berlin
                 </label>
                 <label>
                     <input type="radio" name="p4" value="2" onclick="respuesta(4, this)"/> Madrid
@@ -79,7 +86,7 @@
             </section>
 
             <button id="btn-submit" onclick="corregir()">Corregir</button>
-            <h2>Preguntas acertadas: <span id="resultado"></span></h2>
+            <h2><span id="resultado"></span></h2>
         </div>
 
         <script src="main.js"></script>
