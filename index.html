@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>UE - Quizz</title>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Quizz</h1>
+            <p>Juego de capitales</p>
+        </header>
+
+        <div class="container">
+            <section id="p0">
+                <h3>¿Cuál es la capital de España?</h3>
+                <label>
+                    <input type="radio" name="p0" value="1"  onclick="respuesta(0, this)"/> Madrid
+                </label>
+                <label>
+                    <input type="radio" name="p0" value="2" onclick="respuesta(0, this)"/> Barcelona
+                </label>
+                <label>
+                    <input type="radio" name="p0" value="3" onclick="respuesta(0, this)"/> Sevilla
+                </label>
+            </section>
+            <!-- -->
+            <section id="p1">
+                <h3>¿Cuál es la capital de Portugal?</h3>
+                <label>
+                    <input type="radio" name="p1" value="1" onclick="respuesta(1, this)"/> Lisboa
+                </label>
+                <label>
+                    <input type="radio" name="p1" value="2" onclick="respuesta(1, this)"/> Porto
+                </label>
+                <label>
+                    <input type="radio" name="p1" value="3" onclick="respuesta(1, this)"/> Paris
+                </label>
+            </section>
+            <!-- -->
+            <section id="p2">
+                <h3>¿Cuál es la capital de Francia?</h3>
+                <label>
+                    <input type="radio" name="p2" value="1" onclick="respuesta(2, this)"/> Paris
+                </label>
+                <label>
+                    <input type="radio" name="p2" value="2" onclick="respuesta(2, this)"/> Lyon
+                </label>
+                <label>
+                    <input type="radio" name="p2" value="3" onclick="respuesta(2, this)"/> Marseille
+                </label>
+            </section>
+            <!-- -->
+            <section id="p3">
+                <h3>¿Cuál es la capital de Italia?</h3>
+                <label>
+                    <input type="radio" name="p3" value="1" onclick="respuesta(3, this)"/>  Roma
+                </label>
+                <label>
+                    <input type="radio" name="p3" value="2" onclick="respuesta(3, this)"/>  Milán
+                </label>
+                <label>
+                    <input type="radio" name="p3" value="3" onclick="respuesta(3, this)"/>  Nueva York
+                </label>
+            </section>
+            <!-- -->
+            <section id="p4">
+                <h3>¿Cuál es la capital de Alemania?</h3>
+                <label>
+                    <input type="radio" name="p4" value="1" onclick="respuesta(4, this)"/>  Berlin
+                </label>
+                <label>
+                    <input type="radio" name="p4" value="2" onclick="respuesta(4, this)"/> Madrid
+                </label>
+                <label>
+                    <input type="radio" name="p4" value="3" onclick="respuesta(4, this)"/> Cordoba
+                </label>
+            </section>
+
+            <button id="btn-submit" onclick="corregir()">Corregir</button>
+            <h2>Preguntas acertadas: <span id="resultado"></span></h2>
+        </div>
+
+        <script src="main.js"></script>
+
+    </body>
+</html>
