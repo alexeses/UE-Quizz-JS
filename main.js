@@ -1,6 +1,8 @@
 let opcCorrecta = [1,3,1,1,1]
 let opcElegida = []
 let cantOK = 0
+let cantTotal = 0; // No implementado
+let cantFail = 0; // No implementado
 let colorSelect = "#f1f1f1cd";
 let colorNone = "#3bc17a";
 
@@ -29,6 +31,20 @@ function userIsNotEmpty() {
   }
 }
 
+function getAllLabels() {
+
+  cantTotal = 0;
+
+  for (let i = 0; i < opcElegida.length; i++) {
+    if (document.getElementById("p" + i)) {
+      cantTotal++;
+    }
+  }
+
+  return cantTotal;
+
+}
+
 function corregir() {
 
   if (userIsNotEmpty() == true) {
@@ -39,7 +55,11 @@ function corregir() {
         cantOK++;
       }
     }
-    document.getElementById("resultado").innerHTML = "Respuestas correctas: " + cantOK;
+    document.getElementById("resultado").innerHTML = "Correctas: " + cantOK;
+    document.getElementById("resultado").innerHTML += "<br>Total preguntas: " + getAllLabels();;
+    document.getElementById("resultado").innerHTML += "<br>Incorrectas: " + (getAllLabels() - cantOK);
+    document.getElementById("resultado").innerHTML += "<br>Porcentaje de aciertos: " + (cantOK / getAllLabels()) * 100 + "%";
+
   } else {
     document.getElementById("resultado").innerHTML = "No has ingresado tu nombre";
   }
