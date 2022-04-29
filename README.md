@@ -1,2 +1,2 @@
 # UE-Quizz-JS
- Cuestionario básico realizado en JavaScript
+ Cuestionario básico realizado en JavaScripta
