@@ -1,7 +1,6 @@
 let opcCorrecta = [1,3,1,1,1]
 let opcElegida = []
 let cantOK = 0
-let cantTotal = 0;
 let colorSelect = "#f1f1f1cd";
 let colorNone = "#3bc17a";
 
@@ -49,6 +48,7 @@ function getAllLabels() {
 function corregir() {
 
   if (userIsNotEmpty() == true) {
+    console.log(document.getElementById("user").value)
     cantOK = 0
 
     for (let i = 0; i < opcElegida.length; i++) {
@@ -57,8 +57,8 @@ function corregir() {
       }
     }
 
-    document.getElementById("resultado").innerHTML = "Correctas: " + cantOK;
-    document.getElementById("resultado").innerHTML += "<br>Total preguntas: " + getAllLabels();;
+
+    document.getElementById("resultado").innerHTML = "Usuario: " + document.getElementById("user").value + "<br>Correctas: " + cantOK + " de " + getAllLabels();
     document.getElementById("resultado").innerHTML += "<br>Incorrectas: " + (getAllLabels() - cantOK);
     document.getElementById("resultado").innerHTML += "<br>Porcentaje de aciertos: " + (cantOK / getAllLabels()) * 100 + "%";
 
