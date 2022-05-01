@@ -1,8 +1,7 @@
 let opcCorrecta = [1,3,1,1,1]
 let opcElegida = []
 let cantOK = 0
-let cantTotal = 0; // No implementado
-let cantFail = 0; // No implementado
+let cantTotal = 0;
 let colorSelect = "#f1f1f1cd";
 let colorNone = "#3bc17a";
 
@@ -23,7 +22,9 @@ function respuesta(nPregunta, select) {
 }
 
 function userIsNotEmpty() {
+
   let user = document.getElementById("user").value;
+
   if (user.length > 0) {
     return true;
   } else {
@@ -35,7 +36,7 @@ function getAllLabels() {
 
   cantTotal = 0;
 
-  for (let i = 0; i < opcElegida.length; i++) {
+  for (let i = 0; i < 5; i++) {
     if (document.getElementById("p" + i)) {
       cantTotal++;
     }
@@ -55,6 +56,7 @@ function corregir() {
         cantOK++;
       }
     }
+
     document.getElementById("resultado").innerHTML = "Correctas: " + cantOK;
     document.getElementById("resultado").innerHTML += "<br>Total preguntas: " + getAllLabels();;
     document.getElementById("resultado").innerHTML += "<br>Incorrectas: " + (getAllLabels() - cantOK);
